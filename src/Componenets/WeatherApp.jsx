@@ -62,7 +62,7 @@ function WeatherApp() {
             {loading && <p>Loading...</p>}
 
             
-            {weathercity?.name ? (
+            {weathercity?.name? (
                 <div className="flex w-full  items-center justify-content-between bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 " style={{ backgroundImage: "url('https://www.weathercompany.com/wp-content/uploads/2024/02/hero-sky-dramatic-lightning-weather-shutterstock_2200924189.jpg')", backgroundPosition: "center", backgroundSize: "cover" }}>
                     <div className="flex flex-col justify-between p-4 leading-normal w-full text-white">
                         <p className="mb-3 font-normal text-white-700 dark:text-gray-400">City Name: {weathercity?.name}</p>
@@ -74,9 +74,9 @@ function WeatherApp() {
                         <p className="mb-3 font-normal  text-white-700 dark:text-gray-400">Sunset: {formatTime(weathercity?.sys?.sunset)} PM</p>
                     </div>
                 </div>
-            ) : error ? (
+            ) : 
                 <p>{error}</p>
-            ):null}
+            }
         </div>
     );
 }

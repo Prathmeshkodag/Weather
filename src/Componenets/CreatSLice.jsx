@@ -41,7 +41,7 @@ export const weatherSLice = createSlice({
             })
             .addCase(GetWeather.rejected, (state, action) => {
                 state.loading = false;
-                
+                state.weathercity = {};
                 state.error = action.payload || "Failed to fetch weather data";
             });
     },
